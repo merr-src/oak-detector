@@ -5,12 +5,10 @@ The project is based on [Luxonis OAK-D](https://shop.luxonis.com/products/oak-d-
 
 **Motivation.** The aim is to optimize power consuming and thermal issues for the device especially for "EdgeAI" cases. Tests showed that witn constant NN activity device turns to thermal shoutdown after 20-25 min on about 25 C ambient temperature. Also with Paspberry Pi 5 as host the device consumed about 10000 mAh power bank in about 1,5 hour (with external rediator on the device).
 
-**Solution.** NN activates just on demand, the trigger to activate NN is moves detector (OpenCV bacground subtractor) which is less computation-consuming. So the logic is that 70-90% of time device performs moves detection and switches to NN when moves reaches certain threshold (t1, no of frames). When NN performing and no objects were detected (during t2, certain frame count) it will fall back to moves detector and so on. Total script duration controlled by t3 parameter (actually it could be slightly longer - till the first switch between states of the system).
-When NN detecting the object within frames succession (t2 controlled) all detections (frames with bboxes, labels and confs) are saved both as images and as records in log file in project directory.
+**Solution.** NN activates just on demand, the trigger to activate NN is moves detector (OpenCV bacground subtractor) which is less computation-consuming. So the logic is that 70-90% of time device performs moves detection and switches to NN when moves reaches certain threshold (```t1```, no of frames). When NN performing and no objects were detected (during ```t2```, certain frame count) it will fall back to moves detector and so on. Total script duration controlled by ```t3``` parameter (actually it could be slightly longer - till the first switch between states of the system).
+When NN detecting the object within frames succession (```t2``` controlled) all detections (frames with bboxes, labels and confs) are saved both as images and as records in log file in project directory.
 
 **Tests.** Device thermal tolerance was rise from 20-25 min@25 C ambient to at less up to 2,5 hrs@35+ C ambient temperature. Power efficiency test will coming soon.
 
 **Run Script.** You can run the script from Therminal with parameters:
-```t1 (mmax)```
-```t2 (nodetmax)```
-```t3 (durationmax)```
+
