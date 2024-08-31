@@ -31,6 +31,5 @@ Linux CLI example: ```python3 oak-detector.py -t1 100 -t2 60 -t3 300 -k 7,7``` S
 3. Functions docstrings
 4. Provide a demo-model
 
-- Credits: Marat A. Sabirov
-- Communication: avkhatovich@gmail.com
+Credits: Marat A. Sabirov, communication: avkhatovich@gmail.com
 
