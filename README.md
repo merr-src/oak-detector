@@ -15,13 +15,13 @@ You can run the script from Therminal with parameters:
 
 - ```"-m", "--model", model path for inference (default='models/model_openvino_2022.1_6shave.blob', type=str)``` converted yolo model
 - ```"-c", "--config", config path for inference (default='models/model.json', type=str)``` model config
-```"-s", "--savepath", path to save frames with detections (default='detections', type=str)```
-```"-t1", "--mmax", constant movement detecion (frames) to NN switch ON (default=25, type=int)``` 30 fps @default bghist, ksize
-```"-t2", "--nodetmax", frames with no detections to OFF nn pipeline (default=25, type=int)``` 12 fps @yolov8 single class detection
-```"-t3", "--maxduration", minimal total duration (sec) of algorithm cycle (default=100, type=int)```
-```"-hst", "--bghist", memory buffer (frames) for bgr subtractor history (default=100, type=int)```
-```"-k", "--ksize", kernel size to erode nonzero points after bgr subtractor (default=(10, 10), type=str)```
-```"-o", "--out", dir to save output frames w/detections (default='./frames/', type=str)```
+- ```"-s", "--savepath", path to save frames with detections (default='detections', type=str)```
+- ```"-t1", "--mmax", constant movement detecion (frames) to NN switch ON (default=25, type=int)``` 30 fps @default bghist, ksize
+- ```"-t2", "--nodetmax", frames with no detections to OFF nn pipeline (default=25, type=int)``` 12 fps @yolov8 single class detection
+- ```"-t3", "--maxduration", minimal total duration (sec) of algorithm cycle (default=100, type=int)```
+- ```"-hst", "--bghist", memory buffer (frames) for bgr subtractor history (default=100, type=int)```
+- ```"-k", "--ksize", kernel size to erode nonzero points after bgr subtractor (default=(10, 10), type=str)```
+- ```"-o", "--out", dir to save output frames w/detections (default='./frames/', type=str)```
 
 Linux CLI example: ```python3 oak-detector.py -t1 100 -t2 60 -t3 300 -k 7,7``` Script was tested with python 3.9 on Windows 10 and Ubuntu 20.04 LTS.
 
@@ -30,6 +30,6 @@ Linux CLI example: ```python3 oak-detector.py -t1 100 -t2 60 -t3 300 -k 7,7``` S
 2. Add parameters (detections filter by conf, by size...)
 3. Functions docstrings
 
-Credits: Marat A. Sabirov
-Communication: avkhatovich@gmail.com
+- Credits: Marat A. Sabirov
+- Communication: avkhatovich@gmail.com
 
