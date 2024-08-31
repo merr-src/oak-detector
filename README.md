@@ -1,5 +1,5 @@
 # oak-detector
-Object Detector for OAK Edge Platform
+**Object Detector for OAK Edge Platform**
 
 The project is based on [Luxonis OAK-D](https://shop.luxonis.com/products/oak-d-lite-1) edge device (smart camera with NPU) and [DepthAI SDK](https://docs-old.luxonis.com/projects/sdk/en/latest/index.html). Code was tested with [OAK-D Lite camera (2021 KS Edition)](https://www.kickstarter.com/projects/opencv/opencv-ai-kit-oak-depth-camera-4k-cv-edge-object-detection?ref=discovery&term=openCV&total_hits=13&category_id=338). Core functionality is object detector with [YOLO8-nano](https://github.com/ultralytics/ultralytics) model ported to NPU-specific format with this [converter](https://www.tools.luxonis.com/). That gives about 10-12 fps YOLO performance @640 image size.
 
@@ -26,6 +26,7 @@ You can run the script from Therminal with parameters:
 Linux CLI example: ```python3 oak-detector.py -t1 100 -t2 60 -t3 300 -k 7,7``` Script was tested with python 3.9 on Windows 10 and Ubuntu 20.04 LTS.
 
 **TO DO**
+0. Provide a demo-model
 1. Power autonomy test (w/RPi 5 as host)
 2. Add parameters (detections filter by conf, by size...)
 3. Functions docstrings
