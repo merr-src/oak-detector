@@ -26,10 +26,10 @@ You can run the script from Therminal with parameters:
 Linux CLI example: ```python3 oak-detector.py -t1 100 -t2 60 -t3 300 -k 7,7``` Script was tested with python 3.9 on Windows 10 and Ubuntu 20.04 LTS.
 
 **TO DO**
-0. Provide a demo-model
 1. Power autonomy test (w/RPi 5 as host)
 2. Add parameters (detections filter by conf, by size...)
 3. Functions docstrings
+4. Provide a demo-model
 
 - Credits: Marat A. Sabirov
 - Communication: avkhatovich@gmail.com
