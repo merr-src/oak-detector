@@ -13,8 +13,8 @@ When NN detecting the object within frames succession (```t2``` controlled) all 
 **Run Script.** First install the requirements from **requirements.txt** file with ```pip install -r requirements.txt``` Then check your DepthAI installation with ```import depthai as dai``` and then ```print(dai.__version__)``` To check OAK device see this [guide](https://docs.luxonis.com/hardware/platform/deploy/usb-deployment-guide/). 
 You can run the script from Therminal with parameters:
 
-```"-m", "--model", model path for inference (default='models/model_openvino_2022.1_6shave.blob', type=str)``` converted yolo model
-```"-c", "--config", config path for inference (default='models/model.json', type=str)``` model config
+- ```"-m", "--model", model path for inference (default='models/model_openvino_2022.1_6shave.blob', type=str)``` converted yolo model
+- ```"-c", "--config", config path for inference (default='models/model.json', type=str)``` model config
 ```"-s", "--savepath", path to save frames with detections (default='detections', type=str)```
 ```"-t1", "--mmax", constant movement detecion (frames) to NN switch ON (default=25, type=int)``` 30 fps @default bghist, ksize
 ```"-t2", "--nodetmax", frames with no detections to OFF nn pipeline (default=25, type=int)``` 12 fps @yolov8 single class detection
